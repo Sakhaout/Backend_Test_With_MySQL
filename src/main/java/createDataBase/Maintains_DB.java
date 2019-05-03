@@ -9,22 +9,35 @@ import org.testng.annotations.Test;
 import connectMySQL.ConnectMySQL;
 
 
-public class Maintains_DB {
+public class Maintains_DB extends ConnectMySQL {
 	
 	public static Scanner scanner = new Scanner(System.in);
 	
+	/*
+	 * This method will help to search data from MySQL database.
+	 * It will ask sql query for searching data, and 
+	 * column name from which cloumn thaat data will comes.
+	 * sql Query for search data = select *from selenium_user
+	 * */
 	public static void search_data_from_MySQL() throws ClassNotFoundException, SQLException {
 		System.out.print("Please Enter SQL Query: ");
 		String query = scanner.nextLine();
 		System.out.print("Enter Column Name: ");
 		String columnLable = scanner.next();
-		ResultSet sql_data = ConnectMySQL.connect_with_DB().executeQuery(query);
+		ResultSet sql_data = connect_with_DB().executeQuery(query);
 		while(sql_data.next()) {
 			String result_data = sql_data.getString(columnLable);
-			System.out.println("Result: " +result_data);
+			System.out.println(columnLable +" : " +result_data);
 
 		}
 	}
+	
+	
+	/*
+	 * This method will help to add data into database.
+	 * It will ask for user information
+	 * 
+	 * */
 	
 	public static void insertData() throws ClassNotFoundException, SQLException {
 		System.out.print("Enter ID: ");
@@ -33,17 +46,26 @@ public class Maintains_DB {
 		String firstname = scanner.next();
 		System.out.print("Enter Email: ");
 		String email = scanner.next();
+		System.out.print("Enter Phone number: ");
+		String phoneNumber = scanner.next();
 
-		String query = "INSERT into selenium_user(Firstname,Email,ID) value ('" +firstname +"','" +email+"','" +ID +"')";
-		ConnectMySQL.connect_with_DB().executeUpdate(query);
+		String query = "INSERT into selenium_user(Firstname,Email,Phone_Number,ID) value ('" +firstname +"','" +email+"','" +phoneNumber+"','" +ID +"')";
+		connect_with_DB().executeUpdate(query);
+		
+		System.out.println("Data has been entered into DB");
 
 	}
 	
+	
+	/*
+	 * This method will help to delete data from database
+	 * It will ask for user ID to delete that data for that user ID
+	 * */
 	public static void deleteData_from_DB() throws ClassNotFoundException, SQLException {
 		System.out.println("Enter the ID number that I want to DELETE: ");
 		int input_id = scanner.nextInt();
 		String query = "DELETE from selenium_user WHERE ID = " +input_id;
-		ConnectMySQL.connect_with_DB().execute(query);
+		connect_with_DB().execute(query);
 	}
 	
 	
@@ -53,7 +75,7 @@ public class Maintains_DB {
 		System.out.print("What to find (firstname or email)");
 		String data = scanner.next();
 		String query = "select *from selenium_user";
-		ResultSet rslt = ConnectMySQL.connect_with_DB().executeQuery(query);
+		ResultSet rslt = connect_with_DB().executeQuery(query);
 		
 		while(rslt.next()) {
 			String result_data = rslt.getString(data);

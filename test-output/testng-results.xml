@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2353" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
+  <suite name="Default suite" duration-ms="4764" started-at="2019-05-03T12:56:21Z" finished-at="2019-05-03T12:56:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2353" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
-      <class name="createDataBase.Maintains_DB">
-        <test-method status="PASS" signature="to_see_Table()[pri:0, instance:createDataBase.Maintains_DB@36d4b5c]" name="to_see_Table" duration-ms="2282" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
+    <test name="Default test" duration-ms="4764" started-at="2019-05-03T12:56:21Z" finished-at="2019-05-03T12:56:26Z">
+      <class name="createDataBase.CreateNewDB">
+        <test-method status="PASS" signature="delete_existing_column()[pri:0, instance:createDataBase.CreateNewDB@5d5eef3d]" name="delete_existing_column" duration-ms="4634" started-at="2019-05-03T12:56:21Z" finished-at="2019-05-03T12:56:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- to_see_Table -->
-      </class> <!-- createDataBase.Maintains_DB -->
+        </test-method> <!-- delete_existing_column -->
+      </class> <!-- createDataBase.CreateNewDB -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
