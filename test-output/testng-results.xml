@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4940" started-at="2019-05-03T01:20:23Z" finished-at="2019-05-03T01:20:27Z">
+  <suite name="Default suite" duration-ms="2349" started-at="2019-05-03T01:33:22Z" finished-at="2019-05-03T01:33:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4940" started-at="2019-05-03T01:20:23Z" finished-at="2019-05-03T01:20:27Z">
+    <test name="Default test" duration-ms="2349" started-at="2019-05-03T01:33:22Z" finished-at="2019-05-03T01:33:24Z">
       <class name="connectMySQL.ConnectMySQL">
-        <test-method status="PASS" signature="testDB()[pri:0, instance:connectMySQL.ConnectMySQL@5d5eef3d]" name="testDB" duration-ms="4878" started-at="2019-05-03T01:20:23Z" finished-at="2019-05-03T01:20:27Z">
+        <test-method status="PASS" signature="testDB()[pri:0, instance:connectMySQL.ConnectMySQL@5d5eef3d]" name="testDB" duration-ms="2271" started-at="2019-05-03T01:33:22Z" finished-at="2019-05-03T01:33:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDB -->
