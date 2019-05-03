@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2345" started-at="2019-05-03T07:33:14Z" finished-at="2019-05-03T07:33:16Z">
+  <suite name="Default suite" duration-ms="2353" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2345" started-at="2019-05-03T07:33:14Z" finished-at="2019-05-03T07:33:16Z">
-      <class name="connectMySQL.ConnectMySQL">
-        <test-method status="PASS" signature="testDB()[pri:0, instance:connectMySQL.ConnectMySQL@5d5eef3d]" name="testDB" duration-ms="2281" started-at="2019-05-03T07:33:14Z" finished-at="2019-05-03T07:33:16Z">
+    <test name="Default test" duration-ms="2353" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
+      <class name="createDataBase.Maintains_DB">
+        <test-method status="PASS" signature="to_see_Table()[pri:0, instance:createDataBase.Maintains_DB@36d4b5c]" name="to_see_Table" duration-ms="2282" started-at="2019-05-03T09:16:52Z" finished-at="2019-05-03T09:16:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDB -->
-      </class> <!-- connectMySQL.ConnectMySQL -->
+        </test-method> <!-- to_see_Table -->
+      </class> <!-- createDataBase.Maintains_DB -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

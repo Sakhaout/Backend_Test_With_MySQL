@@ -13,8 +13,17 @@ public class Maintains_DB {
 	
 	public static Scanner scanner = new Scanner(System.in);
 	
-	public void insertData() throws ClassNotFoundException, SQLException {
-		
+	
+	public static void insertData() throws ClassNotFoundException, SQLException {
+		System.out.print("Enter ID: ");
+		int ID = scanner.nextInt();
+		System.out.print("Enter Firstname: ");
+		String firstname = scanner.next();
+		System.out.print("Enter Email: ");
+		String email = scanner.next();
+
+		String cuery = "INSERT into selenium_user(Firstname,Email,ID) value ('" +firstname +"','" +email+"','" +ID +"')";
+		ConnectMySQL.connect_with_DB().executeUpdate(cuery);
 
 	}
 	

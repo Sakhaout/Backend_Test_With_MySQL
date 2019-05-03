@@ -8,7 +8,9 @@ public class ExecuteMySQL_DB {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		Maintains_DB.deleteData_from_DB(); //Delete data from MySQL DB
+		Maintains_DB.insertData(); // To Add data into database
 		Maintains_DB.see_data_from_MySQL(); //See Data from DB
+
 
 	}
 
