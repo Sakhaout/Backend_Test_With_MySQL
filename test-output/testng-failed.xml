@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="connectMySQL.ConnectMySQL">
+      <class name="createDataBase.InportData_to_DB">
         <methods>
-          <include name="testDB"/>
+          <include name="insertData"/>
         </methods>
-      </class> <!-- connectMySQL.ConnectMySQL -->
+      </class> <!-- createDataBase.InportData_to_DB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
