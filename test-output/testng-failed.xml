@@ -5,7 +5,7 @@
     <classes>
       <class name="createDataBase.CreateNewDB">
         <methods>
-          <include name="create_new_column"/>
+          <include name="rearrange_MySQL_column"/>
         </methods>
       </class> <!-- createDataBase.CreateNewDB -->
     </classes>

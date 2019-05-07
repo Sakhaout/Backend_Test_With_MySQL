@@ -40,16 +40,21 @@ public class Maintains_DB extends ConnectMySQL {
 	 * */
 	
 	public static void insertData() throws ClassNotFoundException, SQLException {
-		System.out.print("Enter ID: ");
-		int ID = scanner.nextInt();
+
 		System.out.print("Enter Firstname: ");
 		String firstname = scanner.next();
+		System.out.print("Enter Lastname: ");
+		String lastname = scanner.next();
 		System.out.print("Enter Email: ");
 		String email = scanner.next();
 		System.out.print("Enter Phone number: ");
 		String phoneNumber = scanner.next();
+//		System.out.print("Enter ID: ");
+//		int ID = scanner.nextInt();
 
-		String query = "INSERT into selenium_user(Firstname,Email,Phone_Number,ID) value ('" +firstname +"','" +email+"','" +phoneNumber+"','" +ID +"')";
+//		String query = "INSERT into selenium_user(id,Firstname,last_name,Email,Phone_Number) value ('"+ID +"','" +firstname +"','"+lastname+"','" +email+"','" +phoneNumber +"')";
+		String query = "INSERT into selenium_user(Firstname,last_name,Email,Phone_Number) value ('" +firstname +"','"+lastname +"','" +email+"','" +phoneNumber +"')";
+
 		connect_with_DB().executeUpdate(query);
 		
 		System.out.println("Data has been entered into DB");
@@ -66,6 +71,8 @@ public class Maintains_DB extends ConnectMySQL {
 		int input_id = scanner.nextInt();
 		String query = "DELETE from selenium_user WHERE ID = " +input_id;
 		connect_with_DB().execute(query);
+		System.out.println("Data has been DELETED from DB");
+
 	}
 	
 	
@@ -79,9 +86,24 @@ public class Maintains_DB extends ConnectMySQL {
 		
 		while(rslt.next()) {
 			String result_data = rslt.getString(data);
-			System.out.println("MySQL data : "+result_data);
+			System.out.println(data+" : "+result_data);
 
 		}
+	}
+	
+	public static void add_data_in_Existing_ROW() throws ClassNotFoundException, SQLException {
+		
+		/*
+		 * This method will help to add a data into an existing row.
+		 * Query = UPDATE [table_name] set [column_name] = '[Data]' where id = 4;
+		 * */
+		
+		System.out.print("Enter Query to add a data into an Existing Row: ");
+		String query = scanner.nextLine();
+		connect_with_DB().executeUpdate(query);
+		System.out.println("Data has been ADDED.");
+
+		
 	}
 
 }

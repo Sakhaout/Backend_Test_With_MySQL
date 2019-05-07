@@ -14,6 +14,8 @@ public class ExecuteMySQL_DB {
 		
 		System.out.print("Enter Your choise: ");
 		int caseNumber = scanner.nextInt();
+		String restart;
+		do {
 		
 		switch(caseNumber) {
 		case 1:
@@ -40,7 +42,13 @@ public class ExecuteMySQL_DB {
 			Maintains_DB.search_data_from_MySQL();
 			break;
 			
+		case 7:
+			Maintains_DB.add_data_in_Existing_ROW();
 		}
+		
+		System.out.print("Enter Y to run it again or Enter anything to exit__");
+		restart = scanner.next();
+		}while(restart.equalsIgnoreCase("y"));
 	}
 
 }
