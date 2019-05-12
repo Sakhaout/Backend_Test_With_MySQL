@@ -54,8 +54,5 @@ public class CreateNewDB extends ConnectMySQL {
 		
 	}
 	
-	public static void create_column_auto_increment() {
-		String query = "";
-	}
 
 }

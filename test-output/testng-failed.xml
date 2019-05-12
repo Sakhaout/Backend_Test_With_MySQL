@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="createDataBase.CreateNewDB">
+      <class name="executeMySQL.DataValidate">
         <methods>
-          <include name="rearrange_MySQL_column"/>
+          <include name="email_validate_with_MySQL"/>
         </methods>
-      </class> <!-- createDataBase.CreateNewDB -->
+      </class> <!-- executeMySQL.DataValidate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
